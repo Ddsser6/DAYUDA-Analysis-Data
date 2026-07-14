@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="600.0" prefWidth="800.0" style="-fx-padding: 0; -fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dayuda.PilihModeController">
+   <children>
+      
+      <ImageView fitHeight="${scalingContainer.height}" fitWidth="${scalingContainer.width}" pickOnBounds="true" preserveRatio="false">
+         <image>
+            <Image url="@background_MenuUtama.jpg" />
+         </image>
+      </ImageView>
+
+      <StackPane style="-fx-background-color: rgba(0, 0, 0, 0.55);" />
+
+      <VBox alignment="CENTER" spacing="40.0">
+         <children>
+            
+            <HBox alignment="CENTER" spacing="8.0" style="-fx-background-color: rgba(255, 255, 255, 0.04); -fx-background-radius: 20px; -fx-padding: 6px 16px; -fx-max-width: 150px;">
+               <children>
+                  <Circle fx:id="aiStatusDot" radius="4.0" fill="#10B981" style="-fx-effect: dropshadow(three-pass-box, #10B981, 8, 0, 0, 0);" />
+                  <Label fx:id="lblAiStatus" text="AI ACTIVE" style="-fx-text-fill: #10B981; -fx-font-size: 11px; -fx-font-family: 'Segoe UI', sans-serif; -fx-font-weight: bold; -fx-letter-spacing: 1.5px;" />
+               </children>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                  <Label text="SELECT MODE" style="-fx-text-fill: #FFFFFF; -fx-font-size: 36px; -fx-font-family: 'Georgia', serif; -fx-letter-spacing: 6px;" />
+                  <Label text="Choose an environment to start your analysis" style="-fx-text-fill: #9CA3AF; -fx-font-size: 13px; -fx-font-family: 'Segoe UI', sans-serif; -fx-letter-spacing: 1px;" />
+               </children>
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <VBox fx:id="cardLightMode" onMouseClicked="#handleLightMode" alignment="CENTER" spacing="15.0" 
+                        style="-fx-background-color: rgba(255, 255, 255, 0.06); -fx-border-color: rgba(255, 255, 255, 0.2); -fx-border-width: 1px; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-padding: 35px; -fx-pref-width: 240px; -fx-cursor: hand;">
+                     <children>
+                        <Label text="Standard" style="-fx-text-fill: #FFFFFF; -fx-font-size: 20px; -fx-font-family: 'Georgia', serif; -fx-letter-spacing: 2px;" />
+                        <Label text="Quick and simplified data visualization for daily reports." alignment="CENTER" textAlignment="CENTER" wrapText="true" style="-fx-text-fill: #9CA3AF; -fx-font-size: 12px; -fx-font-family: 'Segoe UI', sans-serif;" />
+                     </children>
+                  </VBox>
+
+                  <VBox fx:id="cardDeepMode" onMouseClicked="#handleDeepMode" alignment="CENTER" spacing="15.0" 
+                        style="-fx-background-color: rgba(255, 255, 255, 0.06); -fx-border-color: rgba(255, 255, 255, 0.2); -fx-border-width: 1px; -fx-border-radius: 8px; -fx-background-radius: 8px; -fx-padding: 35px; -fx-pref-width: 240px; -fx-cursor: hand;">
+                     <children>
+                        <Label text="Advanced" style="-fx-text-fill: #FFFFFF; -fx-font-size: 20px; -fx-font-family: 'Georgia', serif; -fx-letter-spacing: 2px;" />
+                        <Label text="Deep statistical processing, heavy datasets, and full insights." alignment="CENTER" textAlignment="CENTER" wrapText="true" style="-fx-text-fill: #9CA3AF; -fx-font-size: 12px; -fx-font-family: 'Segoe UI', sans-serif;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+      <StackPane fx:id="scalingContainer" mouseTransparent="true" visible="false" />
+
+   </children>
+</StackPane>

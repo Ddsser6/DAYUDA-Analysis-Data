@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="600.0" prefWidth="800.0" style="-fx-padding: 0; -fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dayuda.MenuUtamaController">
+   <children>
+      
+      <ImageView fx:id="backgroundView" fitHeight="${scalingContainer.height}" fitWidth="${scalingContainer.width}" pickOnBounds="true" preserveRatio="false">
+         <image>
+            <Image url="@background_MenuUtama.jpg" />
+         </image>
+      </ImageView>
+
+      <StackPane style="-fx-background-color: rgba(0, 0, 0, 0.45);" />
+
+      <VBox alignment="CENTER" spacing="25.0">
+         <children>
+            <Label text="DAYUDA" style="-fx-text-fill: #FFFFFF; -fx-font-size: 76px; -fx-font-family: 'Georgia', 'Times New Roman', serif; -fx-font-weight: normal; -fx-letter-spacing: 12px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 2);" />
+            
+            <Label text="DATA ANALYTICS PLATFORM" style="-fx-text-fill: #D1D5DB; -fx-font-size: 13px; -fx-font-family: 'Segoe UI', sans-serif; -fx-font-weight: bold; -fx-letter-spacing: 5px;" />
+            
+            <StackPane prefHeight="25.0" prefWidth="200.0" />
+
+            <Button fx:id="btnGetStarted" mnemonicParsing="false" onAction="#handleGetStarted" text="GET STARTED" 
+                    style="-fx-background-color: rgba(255, 255, 255, 0.12); 
+                           -fx-border-color: rgba(255, 255, 255, 0.4); 
+                           -fx-border-width: 1px; 
+                           -fx-border-radius: 4px; 
+                           -fx-background-radius: 4px; 
+                           -fx-text-fill: #FFFFFF; 
+                           -fx-font-size: 13px; 
+                           -fx-font-family: 'Segoe UI', sans-serif; 
+                           -fx-font-weight: bold; 
+                           -fx-padding: 14px 55px; 
+                           -fx-cursor: hand; 
+                           -fx-letter-spacing: 3px;" />
+         </children>
+      </VBox>
+
+      <StackPane fx:id="scalingContainer" mouseTransparent="true" visible="false" />
+
+   </children>
+</StackPane>
